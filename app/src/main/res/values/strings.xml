@@ -1,3 +1,77 @@
 <resources>
     <string name="app_name">MoodPlayer</string>
+    <string name="title_activity_quiz">QuizActivity</string>
+
+    <string-array name="genres">
+        <item>Metal</item>
+        <item>Classical</item>
+        <item>Blues</item>
+        <item>Indie</item>
+        <item>Hip-Hop</item>
+        <item>Alternative</item>
+        <item>EDM</item>
+        <item>Rock</item>
+        <item>Country</item>
+        <item>Punk</item>
+        <item>Deep House</item>
+        <item>Funk</item>
+        <item>Jazz</item>
+        <item>Minimal</item>
+        <item>Pop</item>
+        <item>RnB</item>
+        <item>Trance</item>
+        <item>Grunge</item>
+        <item>Trap</item>
+        <item>Reggae</item>
+        <item>NU Disco</item>
+        <item>Chill</item>
+        <item>Dubstep</item>
+    </string-array>
+
+    <string-array name="artists_hiphop">
+        <item>Tupac</item>
+        <item>Lil Wayne</item>
+        <item>Drake</item>
+        <item>The Weeknd</item>
+        <item>Lil Uzi Vert</item>
+        <item>Migos</item>
+    </string-array>
+
+    <string-array name="artists_rock">
+
+    </string-array>
+
+    <string-array name="artists_metal">
+
+    </string-array>
+
+    <string-array name="artists_classical">
+        <item>Bach</item>
+        <item>Mozart</item>
+        <item>Beethoven</item>
+        <item>Wagner</item>
+        <item>Chopin</item>
+        <item>Tchaikovsky</item>
+    </string-array>
+
+    <string-array name="artists_edm">
+        <item>Martin Garrix</item>
+        <item>Marshmello</item>
+        <item>Hardwell</item>
+        <item>Tiësto</item>
+        <item>Skrillex</item>
+        <item>Deadmau5</item>
+    </string-array>
+
+    <string-array name="artists_jazz">
+        <item>Miles Davis</item>
+        <item>Benny Goodman</item>
+        <item>Charlie Parker</item>
+        <item>Duke Ellington</item>
+        <item>Louis Armstrong</item>
+        <item>John Coltrane</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

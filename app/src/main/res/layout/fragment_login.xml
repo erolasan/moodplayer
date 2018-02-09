@@ -1,0 +1,40 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context="erolasan.moodplayer.Quiz.LoginFragment">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please enter your name to continue"
+        android:textColor="@color/colorPrimary"
+        android:textSize="20sp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="50dp"/>
+
+    <EditText
+        android:textSize="20sp"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimary"
+        android:shadowColor="@color/colorPrimary"
+        android:textColorHint="@color/colorPrimaryDark"
+        android:inputType="textCapSentences"
+        android:layout_gravity="center"
+        />
+
+    <Button
+        android:id="@+id/done"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Done"
+        android:textAllCaps="false"
+        android:textColor="@color/colorPrimary"
+        style="@style/Base.Widget.AppCompat.Button.Borderless"
+        android:textSize="18sp"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"/>
+
+</FrameLayout>
