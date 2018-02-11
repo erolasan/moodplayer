@@ -15,6 +15,7 @@
         android:layout_marginBottom="50dp"/>
 
     <EditText
+        android:id="@+id/name"
         android:textSize="20sp"
         android:layout_width="300dp"
         android:layout_height="wrap_content"

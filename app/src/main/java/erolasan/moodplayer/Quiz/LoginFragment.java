@@ -1,19 +1,21 @@
 package erolasan.moodplayer.Quiz;
 
 import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 
 import erolasan.moodplayer.R;
+import erolasan.moodplayer.Utils.SharedPref;
 
 
-public class LoginFragment extends Fragment {
+public class LoginFragment extends Fragment{
 
     private OnFragmentInteractionListener mListener;
+    private EditText name;
 
     public LoginFragment() {
         // Required empty public constructor
@@ -26,9 +28,12 @@ public class LoginFragment extends Fragment {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_login, container, false);
 
+        name = (EditText) v.findViewById(R.id.name);
         v.findViewById(R.id.done).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                SharedPref sharedPref = new SharedPref();
+                sharedPref.putName(name.getText().toString());
                 if (mListener != null) {
                     mListener.onFragmentInteraction();
                 }
@@ -55,6 +60,7 @@ public class LoginFragment extends Fragment {
         super.onDetach();
         mListener = null;
     }
+
 
     public interface OnFragmentInteractionListener {
         void onFragmentInteraction();

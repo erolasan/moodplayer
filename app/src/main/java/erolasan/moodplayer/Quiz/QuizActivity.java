@@ -9,12 +9,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Window;
 import android.view.WindowManager;
 
-import java.util.concurrent.locks.Lock;
-
 import erolasan.moodplayer.R;
 import erolasan.moodplayer.Utils.CustomViewPager;
 
-public class QuizActivity extends AppCompatActivity implements GreetingsFragment.OnFragmentInteractionListener, LoginFragment.OnFragmentInteractionListener{
+public class QuizActivity extends AppCompatActivity
+        implements GreetingsFragment.OnFragmentInteractionListener, LoginFragment.OnFragmentInteractionListener{
 
     private CustomViewPager mPager;
     private QuizPagerAdapter mPagerAdapter;
