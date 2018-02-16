@@ -7,12 +7,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.Toast;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import erolasan.moodplayer.R;
 import erolasan.moodplayer.Utils.SharedPref;
 
 
-public class LoginFragment extends Fragment{
+public class LoginFragment extends Fragment {
 
     private OnFragmentInteractionListener mListener;
     private EditText name;
@@ -32,10 +36,17 @@ public class LoginFragment extends Fragment{
         v.findViewById(R.id.done).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                SharedPref sharedPref = new SharedPref();
-                sharedPref.putName(name.getText().toString());
-                if (mListener != null) {
-                    mListener.onFragmentInteraction();
+                Pattern ps = Pattern.compile("^[a-zA-Z]+$");
+                Matcher ms = ps.matcher(name.getText().toString());
+                boolean bs = ms.matches();
+                if (!bs) {
+                    Toast.makeText(getActivity(), "Please enter a valid name!", Toast.LENGTH_SHORT).show();
+                } else {
+                    SharedPref sharedPref = new SharedPref();
+                    sharedPref.putName(name.getText().toString());
+                    if (mListener != null) {
+                        mListener.onFragmentInteraction();
+                    }
                 }
             }
         });

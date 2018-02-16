@@ -1,0 +1,43 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bg"
+    tools:context="erolasan.moodplayer.Quiz.ArtistsFragment">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="250dp"
+        android:text="Pick your preferred artists"
+        android:textColor="@color/colorPrimary"
+        android:textSize="20sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="225dp"
+        android:text="Swipe right or left if you like the artist or not"
+        android:textColor="#ccc" />
+
+    <com.yuyakaido.android.cardstackview.CardStackView
+        android:id="@+id/cardStack"
+        android:layout_gravity="center"
+        app:swipeDirection="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="250dp"
+        android:paddingBottom="150dp"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"
+        android:clipToPadding="false"
+        app:rightOverlay="@layout/card_overlay_right"
+        app:leftOverlay="@layout/card_overlay_left"
+        />
+
+
+
+</FrameLayout>
