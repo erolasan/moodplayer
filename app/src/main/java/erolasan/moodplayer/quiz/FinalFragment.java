@@ -1,33 +1,22 @@
-package erolasan.moodplayer.Quiz;
+package erolasan.moodplayer.quiz;
 
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import erolasan.moodplayer.R;
-import erolasan.moodplayer.Utils.SharedPref;
+import erolasan.moodplayer.utils.SharedPref;
 
 
-/**
- * A simple {@link Fragment} subclass.
- * Activities that contain this fragment must implement the
- * {@link GreetingsFragment.OnFragmentInteractionListener} interface
- * to handle interaction events.
- */
-public class GreetingsFragment extends Fragment {
+public class FinalFragment extends Fragment {
 
     private OnFragmentInteractionListener mListener;
-    private TextView helloUser;
-    private SharedPref sharedPref;
     private boolean _hasLoadedOnce = false;
 
-    public GreetingsFragment() {
+    public FinalFragment() {
         // Required empty public constructor
     }
 
@@ -35,21 +24,41 @@ public class GreetingsFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
         // Inflate the layout for this fragment
-        View v = inflater.inflate(R.layout.fragment_greetings, container, false);
-        sharedPref = new SharedPref();
-        helloUser = (TextView) v.findViewById(R.id.hello_user);
+        View v = inflater.inflate(R.layout.fragment_final, container, false);
 
         v.findViewById(R.id.ok).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (mListener != null) {
+                if (mListener != null)
                     mListener.onFragmentInteraction();
-                }
             }
         });
+
         return v;
+    }
+
+    @Override
+    public void setUserVisibleHint(boolean isVisibleToUser) {
+        super.setUserVisibleHint(true);
+
+
+        if (this.isVisible()) {
+            // we check that the fragment is becoming visible
+            if (isVisibleToUser && !_hasLoadedOnce) {
+                SharedPref sharedPref = new SharedPref();
+
+                for (String s : sharedPref.getArtists(true)){
+                    System.out.println("Liked: " + s);
+                }
+
+                for (String s : sharedPref.getArtists(false)){
+                    System.out.println("Disliked" + s);
+                }
+
+                _hasLoadedOnce = true;
+            }
+        }
     }
 
 
@@ -70,21 +79,9 @@ public class GreetingsFragment extends Fragment {
         mListener = null;
     }
 
-    @Override
-    public void setUserVisibleHint(boolean isVisibleToUser) {
-        super.setUserVisibleHint(true);
-
-
-        if (this.isVisible()) {
-            // we check that the fragment is becoming visible
-            if (isVisibleToUser && !_hasLoadedOnce) {
-                helloUser.setText("Hello " + sharedPref.getName() + ",");
-                _hasLoadedOnce = true;
-            }
-        }
-    }
 
     public interface OnFragmentInteractionListener {
+        // TODO: Update argument type and name
         void onFragmentInteraction();
     }
 }

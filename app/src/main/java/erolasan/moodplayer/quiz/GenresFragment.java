@@ -1,10 +1,9 @@
-package erolasan.moodplayer.Quiz;
+package erolasan.moodplayer.quiz;
 
 
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,7 +16,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 import erolasan.moodplayer.R;
-import erolasan.moodplayer.Utils.SharedPref;
+import erolasan.moodplayer.utils.SharedPref;
 
 
 /**

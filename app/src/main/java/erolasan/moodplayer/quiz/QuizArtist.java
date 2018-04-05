@@ -1,4 +1,4 @@
-package erolasan.moodplayer.Quiz;
+package erolasan.moodplayer.quiz;
 
 /**
  * Created by Erol Asan on 2/11/2018.

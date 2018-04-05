@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorPrimary"
+    android:fitsSystemWindows="true"
+    tools:context=".HomeFragment">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        app:elevation="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@android:color/transparent"
+        android:fitsSystemWindows="true"
+
+        >
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/toolbar_layout"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:title=""
+            app:toolbarId="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                app:popupTheme="@style/AppTheme.PopupOverlay"
+                app:title=""
+                android:layout_width="match_parent"
+                android:layout_height="80dp" />
+
+            <ImageView
+                android:id="@+id/circlebg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/half_circle_bg" />
+
+            <TextView
+                android:id="@+id/moodTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp"
+                android:text="Last Recognized Mood"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+
+            <TextView
+                android:id="@+id/moodTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="50dp"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/recognize"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center_horizontal"
+                android:layout_marginBottom="25dp"
+                android:backgroundTint="@color/white"
+                android:text="New Mood"
+                android:textColor="@color/lightBlue" />
+
+            <ImageView
+                android:id="@+id/moodImg"
+                app:layout_collapseMode="parallax"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="25dp" />
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/fragment_playlist" />
+
+    <View
+        android:id="@+id/overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#CC000000"
+        android:visibility="gone" />
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,4 +1,4 @@
-package erolasan.moodplayer.Utils;
+package erolasan.moodplayer.utils;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -22,6 +22,7 @@ public class SharedPref {
     private static final String ARTISTS_LIKED_KEY = "user_artists_liked";
     private static final String ARTISTS_DISLIKED_KEY = "user_artists_disliked";
     private static final String QUIZ_COMPLETED_KEY = "quiz_completed";
+    private static final String LAST_MOOD_KEY = "last_mood";
 
 
     public SharedPref() {
@@ -75,5 +76,15 @@ public class SharedPref {
 
     public boolean getQuizCompleted(){
         return sharedPref.getBoolean(QUIZ_COMPLETED_KEY, false);
+    }
+
+    public void putLastMood(Mood mood){
+        if (editor == null) editor = sharedPref.edit();
+        editor.putString(LAST_MOOD_KEY, mood.toString());
+        editor.apply();
+    }
+
+    public String getLastMood(){
+        return sharedPref.getString(LAST_MOOD_KEY, "EMPTY_MOOD");
     }
 }

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context="erolasan.moodplayer.moodrecognition.MoodResultActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="250dp"
+        android:text="Recognized mood"
+        android:textColor="@color/colorPrimary"
+        android:textSize="20sp" />
+
+    <ImageView
+        android:id="@+id/moodImg"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="30dp"
+        android:src="@drawable/mood_happy" />
+
+    <TextView
+        android:id="@+id/moodTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="55dp"
+        android:text="HAPPY"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="225dp"
+        android:orientation="vertical">
+
+        <Button
+            android:textSize="18sp"
+            android:id="@+id/ok"
+            android:backgroundTint="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/lightBlue"
+            android:text="ok" />
+
+        <Button
+            android:textSize="14sp"
+            android:id="@+id/retry"
+            style="@style/Base.Widget.AppCompat.Button.Borderless.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:text="retry" />
+    </LinearLayout>
+
+</FrameLayout>

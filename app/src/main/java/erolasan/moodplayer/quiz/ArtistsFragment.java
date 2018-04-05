@@ -1,13 +1,11 @@
-package erolasan.moodplayer.Quiz;
+package erolasan.moodplayer.quiz;
 
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 
 import com.yuyakaido.android.cardstackview.CardStackView;
 import com.yuyakaido.android.cardstackview.SwipeDirection;
@@ -22,7 +20,7 @@ import java.util.Set;
 import java.util.Stack;
 
 import erolasan.moodplayer.R;
-import erolasan.moodplayer.Utils.SharedPref;
+import erolasan.moodplayer.utils.SharedPref;
 
 
 public class ArtistsFragment extends Fragment {

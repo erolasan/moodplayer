@@ -1,23 +1,27 @@
-package erolasan.moodplayer.Quiz;
+package erolasan.moodplayer.quiz;
 
 import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
+import android.widget.Toast;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import erolasan.moodplayer.R;
-import erolasan.moodplayer.Utils.SharedPref;
+import erolasan.moodplayer.utils.SharedPref;
 
 
-public class FinalFragment extends Fragment {
+public class LoginFragment extends Fragment {
 
     private OnFragmentInteractionListener mListener;
-    private boolean _hasLoadedOnce = false;
+    private EditText name;
 
-    public FinalFragment() {
+    public LoginFragment() {
         // Required empty public constructor
     }
 
@@ -26,40 +30,28 @@ public class FinalFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View v = inflater.inflate(R.layout.fragment_final, container, false);
+        View v = inflater.inflate(R.layout.fragment_login, container, false);
 
-        v.findViewById(R.id.ok).setOnClickListener(new View.OnClickListener() {
+        name = (EditText) v.findViewById(R.id.name);
+        v.findViewById(R.id.done).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (mListener != null)
-                    mListener.onFragmentInteraction();
+                Pattern ps = Pattern.compile("^[a-zA-Z]+$");
+                Matcher ms = ps.matcher(name.getText().toString());
+                boolean bs = ms.matches();
+                if (!bs) {
+                    Toast.makeText(getActivity(), "Please enter a valid name!", Toast.LENGTH_SHORT).show();
+                } else {
+                    SharedPref sharedPref = new SharedPref();
+                    sharedPref.putName(name.getText().toString());
+                    if (mListener != null) {
+                        mListener.onFragmentInteraction();
+                    }
+                }
             }
         });
 
         return v;
-    }
-
-    @Override
-    public void setUserVisibleHint(boolean isVisibleToUser) {
-        super.setUserVisibleHint(true);
-
-
-        if (this.isVisible()) {
-            // we check that the fragment is becoming visible
-            if (isVisibleToUser && !_hasLoadedOnce) {
-                SharedPref sharedPref = new SharedPref();
-
-                for (String s : sharedPref.getArtists(true)){
-                    System.out.println("Liked: " + s);
-                }
-
-                for (String s : sharedPref.getArtists(false)){
-                    System.out.println("Disliked" + s);
-                }
-
-                _hasLoadedOnce = true;
-            }
-        }
     }
 
 
@@ -82,7 +74,6 @@ public class FinalFragment extends Fragment {
 
 
     public interface OnFragmentInteractionListener {
-        // TODO: Update argument type and name
         void onFragmentInteraction();
     }
 }

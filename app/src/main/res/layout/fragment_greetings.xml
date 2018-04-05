@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg"
-    tools:context="erolasan.moodplayer.Quiz.GreetingsFragment">
+    tools:context="erolasan.moodplayer.quiz.GreetingsFragment">
 
     <TextView
         android:id="@+id/hello_user"

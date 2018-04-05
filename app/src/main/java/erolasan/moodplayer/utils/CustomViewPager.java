@@ -1,4 +1,4 @@
-package erolasan.moodplayer.Utils;
+package erolasan.moodplayer.utils;
 
 import android.content.Context;
 import android.support.v4.view.ViewPager;

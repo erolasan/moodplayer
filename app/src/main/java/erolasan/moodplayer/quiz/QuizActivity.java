@@ -1,20 +1,18 @@
-package erolasan.moodplayer.Quiz;
+package erolasan.moodplayer.quiz;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
-import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.Toast;
 
-import erolasan.moodplayer.MainActivity;
+import erolasan.moodplayer.HomeActivity;
 import erolasan.moodplayer.R;
-import erolasan.moodplayer.Utils.CustomViewPager;
-import erolasan.moodplayer.Utils.SharedPref;
+import erolasan.moodplayer.utils.CustomViewPager;
+import erolasan.moodplayer.utils.SharedPref;
 
 public class QuizActivity extends AppCompatActivity
         implements GreetingsFragment.OnFragmentInteractionListener,
@@ -94,7 +92,7 @@ public class QuizActivity extends AppCompatActivity
     }
 
     private void goToMainAppScreen(){
-        startActivity(new Intent(this, MainActivity.class));
+        startActivity(new Intent(this, HomeActivity.class));
         finish();
     }
 }

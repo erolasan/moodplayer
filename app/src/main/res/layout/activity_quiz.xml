@@ -3,10 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="erolasan.moodplayer.Quiz.QuizActivity">
+    tools:context="erolasan.moodplayer.quiz.QuizActivity">
 
 
-    <erolasan.moodplayer.Utils.CustomViewPager
+    <erolasan.moodplayer.utils.CustomViewPager
         android:id="@+id/pager"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
