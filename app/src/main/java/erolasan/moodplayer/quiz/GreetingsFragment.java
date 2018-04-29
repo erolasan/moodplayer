@@ -12,12 +12,6 @@ import erolasan.moodplayer.R;
 import erolasan.moodplayer.utils.SharedPref;
 
 
-/**
- * A simple {@link Fragment} subclass.
- * Activities that contain this fragment must implement the
- * {@link GreetingsFragment.OnFragmentInteractionListener} interface
- * to handle interaction events.
- */
 public class GreetingsFragment extends Fragment {
 
     private OnFragmentInteractionListener mListener;

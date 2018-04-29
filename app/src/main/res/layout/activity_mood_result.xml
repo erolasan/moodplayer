@@ -14,7 +14,7 @@
         android:layout_marginBottom="250dp"
         android:text="Recognized mood"
         android:textColor="@color/colorPrimary"
-        android:textSize="20sp" />
+        android:textSize="22sp" />
 
     <ImageView
         android:id="@+id/moodImg"
@@ -48,7 +48,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textColor="@color/lightBlue"
+            android:textColor="@color/orange"
             android:text="ok" />
 
         <Button

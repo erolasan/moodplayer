@@ -13,7 +13,7 @@
         android:layout_marginBottom="250dp"
         android:text="Pick your preferred artists"
         android:textColor="@color/colorPrimary"
-        android:textSize="20sp" />
+        android:textSize="22sp" />
 
     <TextView
         android:layout_width="wrap_content"

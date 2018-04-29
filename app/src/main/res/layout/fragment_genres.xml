@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         android:text="Pick your preferred music type"
         android:textColor="@color/colorPrimary"
-        android:textSize="20sp"
+        android:textSize="22sp"
         android:layout_gravity="center"
         android:layout_marginBottom="250dp"/>
 
@@ -29,8 +29,8 @@
         android:layout_height="300dp"
         android:layout_gravity="center"
         chipcloud:deselectedColor="@color/colorPrimary"
-        chipcloud:deselectedFontColor="@color/darkBlue"
-        chipcloud:selectedColor="#444"
+        chipcloud:deselectedFontColor="#222"
+        chipcloud:selectedColor="@color/orange"
         chipcloud:selectedFontColor="@color/colorPrimary"
         chipcloud:deselectTransitionMS="150"
         chipcloud:selectTransitionMS="350"

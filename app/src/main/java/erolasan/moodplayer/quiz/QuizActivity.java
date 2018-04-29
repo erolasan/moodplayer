@@ -9,7 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Window;
 import android.view.WindowManager;
 
-import erolasan.moodplayer.HomeActivity;
+import erolasan.moodplayer.home.HomeActivity;
 import erolasan.moodplayer.R;
 import erolasan.moodplayer.utils.CustomViewPager;
 import erolasan.moodplayer.utils.SharedPref;

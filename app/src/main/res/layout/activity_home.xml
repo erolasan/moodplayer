@@ -5,9 +5,11 @@
     android:background="@color/colorPrimary"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="erolasan.moodplayer.HomeActivity"
-    android:id="@+id/fragment_container">
+    tools:context="erolasan.moodplayer.home.HomeActivity">
 
-
+<erolasan.moodplayer.utils.CustomViewPager
+    android:id="@+id/pager"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"/>
 
 </FrameLayout>

@@ -12,10 +12,9 @@
         android:name="android.hardware.camera"
         android:required="true" />
 
-    <!-- think about allowbackup ? -->
     <application
         android:name=".App"
-        android:allowBackup="true"
+        android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
@@ -32,7 +31,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".HomeActivity"
+            android:name=".home.HomeActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".moodrecognition.CameraActivity"
@@ -40,9 +39,6 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".moodrecognition.MoodResultActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".SpotifyTest"
             android:screenOrientation="portrait" />
 
         <activity

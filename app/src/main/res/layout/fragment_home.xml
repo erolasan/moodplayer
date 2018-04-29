@@ -6,7 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/colorPrimary"
     android:fitsSystemWindows="true"
-    tools:context=".HomeFragment">
+    tools:context=".home.HomeFragment">
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/app_bar"
@@ -62,14 +62,14 @@
                 android:textSize="20sp" />
 
             <Button
-                android:id="@+id/recognize"
+                android:id="@+id/generatePlaylist"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom|center_horizontal"
                 android:layout_marginBottom="25dp"
                 android:backgroundTint="@color/white"
-                android:text="New Mood"
-                android:textColor="@color/lightBlue" />
+                android:text="Generate Playlist"
+                android:textColor="@color/orange" />
 
             <ImageView
                 android:id="@+id/moodImg"
@@ -77,10 +77,15 @@
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_gravity="center"
-                android:layout_marginBottom="25dp" />
+                android:layout_marginBottom="25dp"
+                android:clickable="true"
+                android:focusable="true"/>
 
         </android.support.design.widget.CollapsingToolbarLayout>
+
+
     </android.support.design.widget.AppBarLayout>
+
 
     <include layout="@layout/fragment_playlist" />
 
@@ -90,5 +95,13 @@
         android:layout_height="match_parent"
         android:background="#CC000000"
         android:visibility="gone" />
+
+    <ProgressBar
+        android:visibility="gone"
+        android:layout_gravity="center"
+        android:id="@+id/loadingProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"/>
 
 </android.support.design.widget.CoordinatorLayout>

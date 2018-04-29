@@ -53,6 +53,6 @@ public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback
 
 
     public void surfaceChanged(SurfaceHolder holder, int format, int w, int h) {
-
+        // empty.
     }
 }

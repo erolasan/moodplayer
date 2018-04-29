@@ -5,6 +5,8 @@
     <color name="colorAccent">#fefefe</color>
     <color name="lightBlue">#FF00c6ff</color>
     <color name="darkBlue">#FF0072ff</color>
+    <color name="orange">#EC9461</color>
+    <color name="purple">#2B2C5A</color>
 
     <color name="black_overlay">#66000000</color>
 </resources>

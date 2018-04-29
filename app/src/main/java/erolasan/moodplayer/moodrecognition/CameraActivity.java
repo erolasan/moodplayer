@@ -155,7 +155,7 @@ public class CameraActivity extends AppCompatActivity implements Detector.ImageL
         if (tongue > upperThreshold || winkTongue > upperThreshold || kiss > upperThreshold)
             return Mood.HAPPY;
 
-        // if all other below 5 then NEUTRAL
+        // if all other below lowerThreshold then NEUTRAL
         if (happy < lowerThreshold && sad < lowerThreshold && angry < lowerThreshold)
             return Mood.NEUTRAL;
 

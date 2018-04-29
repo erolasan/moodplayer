@@ -20,7 +20,7 @@
         android:layout_height="wrap_content"
         android:text="Ready to start using the app?"
         android:textColor="@color/colorPrimary"
-        android:textSize="20sp"
+        android:textSize="22sp"
         android:layout_gravity="center" />
 
     <Button
