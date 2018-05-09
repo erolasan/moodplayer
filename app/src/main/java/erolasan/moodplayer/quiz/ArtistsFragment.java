@@ -192,9 +192,4 @@ public class ArtistsFragment extends Fragment {
         super.onDetach();
         mListener = null;
     }
-
-
-    public interface OnFragmentInteractionListener {
-        void onFragmentInteraction();
-    }
 }

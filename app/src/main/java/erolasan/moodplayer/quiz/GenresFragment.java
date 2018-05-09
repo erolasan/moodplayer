@@ -24,7 +24,7 @@ import erolasan.moodplayer.utils.SharedPref;
  */
 public class GenresFragment extends Fragment {
 
-    private GreetingsFragment.OnFragmentInteractionListener mListener;
+    private OnFragmentInteractionListener mListener;
     private Set<String> genres = new HashSet<>();
 
     public GenresFragment() {
@@ -75,8 +75,8 @@ public class GenresFragment extends Fragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        if (context instanceof GreetingsFragment.OnFragmentInteractionListener) {
-            mListener = (GreetingsFragment.OnFragmentInteractionListener) context;
+        if (context instanceof OnFragmentInteractionListener) {
+            mListener = (OnFragmentInteractionListener) context;
         } else {
             throw new RuntimeException(context.toString()
                     + " must implement OnFragmentInteractionListener");
@@ -89,7 +89,5 @@ public class GenresFragment extends Fragment {
         mListener = null;
     }
 
-    public interface OnFragmentInteractionListener {
-        void onFragmentInteraction();
-    }
+
 }

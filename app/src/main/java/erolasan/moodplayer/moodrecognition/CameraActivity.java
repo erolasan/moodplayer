@@ -6,6 +6,7 @@ import android.hardware.Camera;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -151,6 +152,7 @@ public class CameraActivity extends AppCompatActivity implements Detector.ImageL
 
         int upperThreshold = 35;
         int lowerThreshold = 3;
+
         // special case
         if (tongue > upperThreshold || winkTongue > upperThreshold || kiss > upperThreshold)
             return Mood.HAPPY;
@@ -158,6 +160,7 @@ public class CameraActivity extends AppCompatActivity implements Detector.ImageL
         // if all other below lowerThreshold then NEUTRAL
         if (happy < lowerThreshold && sad < lowerThreshold && angry < lowerThreshold)
             return Mood.NEUTRAL;
+
 
         if (happy > sad && happy > angry) return Mood.HAPPY;
         else if (sad > happy && sad > angry ) return Mood.SAD;

@@ -46,16 +46,6 @@ public class FinalFragment extends Fragment {
         if (this.isVisible()) {
             // we check that the fragment is becoming visible
             if (isVisibleToUser && !_hasLoadedOnce) {
-                SharedPref sharedPref = new SharedPref();
-
-                for (String s : sharedPref.getArtists(true)){
-                    System.out.println("Liked: " + s);
-                }
-
-                for (String s : sharedPref.getArtists(false)){
-                    System.out.println("Disliked" + s);
-                }
-
                 _hasLoadedOnce = true;
             }
         }
@@ -77,11 +67,5 @@ public class FinalFragment extends Fragment {
     public void onDetach() {
         super.onDetach();
         mListener = null;
-    }
-
-
-    public interface OnFragmentInteractionListener {
-        // TODO: Update argument type and name
-        void onFragmentInteraction();
     }
 }

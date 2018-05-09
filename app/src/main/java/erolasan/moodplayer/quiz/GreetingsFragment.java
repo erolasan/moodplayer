@@ -76,7 +76,4 @@ public class GreetingsFragment extends Fragment {
         }
     }
 
-    public interface OnFragmentInteractionListener {
-        void onFragmentInteraction();
-    }
 }

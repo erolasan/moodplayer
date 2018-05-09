@@ -15,11 +15,7 @@ import erolasan.moodplayer.utils.CustomViewPager;
 import erolasan.moodplayer.utils.SharedPref;
 
 public class QuizActivity extends AppCompatActivity
-        implements GreetingsFragment.OnFragmentInteractionListener,
-        LoginFragment.OnFragmentInteractionListener,
-        GenresFragment.OnFragmentInteractionListener,
-        ArtistsFragment.OnFragmentInteractionListener,
-        FinalFragment.OnFragmentInteractionListener {
+        implements OnFragmentInteractionListener {
 
     private CustomViewPager mPager;
     private QuizPagerAdapter mPagerAdapter;

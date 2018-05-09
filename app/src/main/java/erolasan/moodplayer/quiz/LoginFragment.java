@@ -72,8 +72,4 @@ public class LoginFragment extends Fragment {
         mListener = null;
     }
 
-
-    public interface OnFragmentInteractionListener {
-        void onFragmentInteraction();
-    }
 }
